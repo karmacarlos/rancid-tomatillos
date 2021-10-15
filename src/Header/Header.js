@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../user-icon.svg'
 import './Header.css';
 
 const Header = () => {
@@ -10,7 +9,7 @@ const Header = () => {
           <li>Watch List</li>
           <li>Favorites</li>
         </ul>
-        <img src={logo} alt='user logo'/>
+        <img src='' alt='user logo'/>
       </nav>
     )
   }
