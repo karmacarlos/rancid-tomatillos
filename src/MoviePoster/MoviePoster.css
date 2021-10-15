@@ -1,0 +1,13 @@
+.poster {
+  height: 450px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  color:white;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
