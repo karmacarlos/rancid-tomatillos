@@ -1,0 +1,10 @@
+.movies-container {
+  background-color: black;
+  height: 90vh;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-auto-flow: row;
+  overflow: scroll;
+}
