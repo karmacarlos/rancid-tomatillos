@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { movieData } from './movieData';
-import { Header } from './Header/Header';
-import { MoviesContainer } from './MoviesContainer/MoviesContainer';
+import { movieData } from './movieData'
+import { Header } from './Header/Header'
 // import logo from './user-icon.svg';
 import './App.css';
 
@@ -15,7 +14,6 @@ class App extends Component {
     return (
       <div className="App">
       <Header />
-      <MoviesContainer />
       </div>
     )
   }
