@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: red 3px solid;
+  color: white;
+  background-color: black;
+}
+
+.title {
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.nav-buttons {
+  display: flex;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  align-items: flex-end;
+
+}
+
+.watch-list {
+  width: 125px;
+}
+
+.icon {
+  height: 30px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  fill: white;
+}
+.title {
+  font-size: 75px;
+}
