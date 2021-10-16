@@ -32,13 +32,11 @@ class App extends Component {
     })).then(() => {
       fetchData(`movies/${poster}/videos`)
       .then(data => this.setState( { trailers: data.videos } ))
-      .then(() => console.log(this.state))
     })
   }
 
   hideDetails = () => {
     this.setState({showMain: true})
-
   }
 
   render() {
