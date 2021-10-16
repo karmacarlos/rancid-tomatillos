@@ -2,7 +2,8 @@ import React from 'react';
 import './MoviesContainer.css';
 import MoviePoster from '../MoviePoster/MoviePoster';
 
-const MoviesContainer = ( {movies, posterClick} ) => {
+const MoviesContainer = ( {movies, displayDetails} ) => {
+
   const moviesCards = movies.map(movie => {
     return (
       <MoviePoster 
@@ -11,7 +12,7 @@ const MoviesContainer = ( {movies, posterClick} ) => {
         title={movie.title}
         rating={movie.average_rating.toFixed(2)}
         key={movie.id}
-        posterClick={posterClick}
+        displayDetails={displayDetails}
       />
     )
   })

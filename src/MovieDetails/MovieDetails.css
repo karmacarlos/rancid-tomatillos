@@ -1,16 +1,39 @@
 .details {
-  background-position: 'center';
-  background-repeat: 'no-repeat';
   height: 100%;
   width: 100%;
+  background-position: 'center';
+  background-repeat: 'no-repeat';
+  background-size: cover;
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
 
 }
-
 .movie-info {
   height: 80vh;
-  width: 100%;
+  width: 30%;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.detail-title {
+
+.arrow{
+  background: none;
+  border: none;
+  display: flex;
+  margin-left: 60px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.detail-title,
+.detail-rating,
+.detail-overview {
   margin-top: 0px;
+}
+
+.detail-overview {
+  margin-bottom: 40px;
 }
