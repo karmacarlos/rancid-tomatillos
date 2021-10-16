@@ -45,6 +45,7 @@ class App extends Component {
         {this.state.showMain ?
         <> 
         <Header />
+        {this.state.error && <h2>{this.state.error}</h2>}
         <MoviesContainer movies={this.state.movies} displayDetails={this.displayDetails} /> </>: 
         <MovieDetails movie={this.state.displayMovie} hideDetails={this.hideDetails}/>
         }
