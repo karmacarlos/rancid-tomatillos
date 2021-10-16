@@ -5,10 +5,3 @@ export const fetchData = (endPoint) => {
   .then(response => response.json())
 }
 
-
-// Component did mount, to paste on App 
-// const componentDidMount = () => {
-//   Promise.resolve(fetchData('movies'))
-//   .then(data => this.setState( { movies: data.movies } ))
-//   .catch(error => this.setState( { error: error.message } ))
-// }

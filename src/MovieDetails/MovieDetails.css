@@ -1,23 +1,22 @@
 .details {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-position: 'center';
   background-repeat: 'no-repeat';
   background-size: cover;
-  opacity: 0.5;
   display: flex;
   justify-content: space-between;
 
 }
 .movie-info {
-  height: 80vh;
-  width: 30%;
+  height: 90vh;
+  width: 40vw;
   margin-right: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  color: white;
 }
-
 
 .arrow{
   background: none;
