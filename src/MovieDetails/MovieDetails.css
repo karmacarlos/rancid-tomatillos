@@ -1,0 +1,16 @@
+.details {
+  background-position: 'center';
+  background-repeat: 'no-repeat';
+  height: 100%;
+  width: 100%;
+
+}
+
+.movie-info {
+  height: 80vh;
+  width: 100%;
+}
+
+.detail-title {
+  margin-top: 0px;
+}

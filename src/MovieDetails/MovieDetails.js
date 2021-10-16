@@ -1,16 +1,17 @@
 // import { render } from '@testing-library/react'
 import React from 'react'
+import './MovieDetails.css'
 
-const MovieDetails = (props) => {
+const MovieDetails = ( {movie} ) => {
   return (
-    <div className="movie-details">
-        <div style={{ backgroundImage: url(props.backgroundPath) }}></div>
-        <section className="movie-info">
-          <h1>{props.movieTitle}</h1>
-          <p>Movie Rating {props.movieRating}</p>
-          <p>{props.overView}</p>
-        </section>
+    <div className="details" style={{ backgroundImage: `url(${movie.backdrop_path})`}}>
+      <section className="movie-info">
+        <h1 className="detail-title">{movie.title}</h1>
+        <p>Movie Rating {movie.average_rating}</p>
+        <p>{movie.overView}</p>
+      </section>
     </div>
+
   )
 }
 
