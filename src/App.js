@@ -13,6 +13,7 @@ class App extends Component {
       showMain: true,
       error: '',
       displayMovie: {},
+      trailers: [],
     }
   }
 
@@ -30,7 +31,8 @@ class App extends Component {
       this.setState({showMain: false, displayMovie: data.movie, trailers: []})
     })).then(() => {
       fetchData(`movies/${poster}/videos`)
-      .then(data => this.setState( { displayMovie.trailers = data.videos}))
+      .then(data => this.setState( { trailers: data.videos } ))
+      .then(() => console.log(this.state))
     })
   }
 
