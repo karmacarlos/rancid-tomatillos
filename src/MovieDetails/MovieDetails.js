@@ -18,11 +18,11 @@ class MovieDetails extends Component {
           <img src={arrow} alt="back arrow"/>
         </button>
         <section className="movie-info">
-          <div className='text-info'>
             <h2 className="detail-title">{this.props.movie.title}</h2>
             <p className="detail-rating">⭐️ Movie Rating {this.props.movie.average_rating.toFixed(2)}</p>
             <p className="detail-overview">{this.props.movie.overview}</p>
-          </div>
+            <p>Released date: {this.props.movie.release_date}</p>
+            <p>Duration: {this.props.runtime} minutes</p>
         </section>
       </div>
     )
