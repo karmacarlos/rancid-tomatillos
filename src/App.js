@@ -20,7 +20,7 @@ class App extends Component {
   componentDidMount = () => {
   Promise.resolve(fetchData('movies'))
   .then(data => this.setState( { movies: data.movies } ))
-  .catch(error => this.setState( { error: error.message } ))
+  .catch(error => this.setState( { error: 'Something went wrong, please try again later' } ))
 }
 
   displayDetails = (event) => {
