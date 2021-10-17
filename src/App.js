@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import { movieData } from './movieData';
 import { Header } from './Header/Header';
 import  MoviesContainer  from './MoviesContainer/MoviesContainer.js';
 import MovieDetails from './MovieDetails/MovieDetails'
@@ -12,30 +11,43 @@ class App extends Component {
     this.state = {
       movies: [],
       showMain: true,
+      error: '',
+      displayMovie: {},
+      trailers: [],
     }
   }
 
   componentDidMount = () => {
   Promise.resolve(fetchData('movies'))
   .then(data => this.setState( { movies: data.movies } ))
-  .catch(error => this.setState( { error: error.message } ))
+  .catch(error => this.setState( { error: 'Something went wrong, please try again later' } ))
 }
 
   displayDetails = (event) => {
-    const poster = Number(event.target.id)
-    fetchData(`movies/${poster}`).then(data => {
-      this.setState({showMain: false, movies: data.movie})
+    const poster = Number(event.target.parentNode.id)
+    Promise.resolve(
+      fetchData(`movies/${poster}`)
+      .then(data => {
+      this.setState({showMain: false, displayMovie: data.movie, trailers: []})
+    })).then(() => {
+      fetchData(`movies/${poster}/videos`)
+      .then(data => this.setState( { trailers: data.videos } ))
     })
   }
 
+  hideDetails = () => {
+    this.setState({showMain: true})
+  }
+
   render() {
-    console.log('detail state', MovieDetails.state)
     return (
       <div className="App">
+        {this.state.showMain ?
+        <> 
         <Header />
-        {this.state.showMain ? 
-        <MoviesContainer movies={this.state.movies} displayDetails={this.displayDetails} /> : 
-        <MovieDetails movie={this.state.movies} hideDetails={this.hideDetails} />
+        {this.state.error && <h2>{this.state.error}</h2>}
+        <MoviesContainer movies={this.state.movies} displayDetails={this.displayDetails} /> </>: 
+        <MovieDetails movie={this.state.displayMovie} hideDetails={this.hideDetails}/>
         }
       </div>
     )

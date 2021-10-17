@@ -4,6 +4,13 @@
   display: flex;
   flex-direction: column;
   color:white;
+  cursor: pointer;
+  padding: 25px;
+  transition-duration: 0.5s;
+}
+
+.poster:hover {
+  transform: scale(1.1);
 }
 
 .info-container {

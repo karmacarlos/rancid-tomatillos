@@ -17,8 +17,6 @@ const MoviesContainer = ( {movies, displayDetails} ) => {
     )
   })
 
-
-
   return (
     <section className='movies-container'>
       {moviesCards}
