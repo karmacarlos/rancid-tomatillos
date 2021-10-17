@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Header } from './Header/Header';
 import  MoviesContainer  from './MoviesContainer/MoviesContainer.js';
-import MovieDetails from './MovieDetails/MovieDetails'
+import MovieDetails from './MovieDetails/MovieDetails';
 import './App.css';
-import { fetchData } from './apiCalls'
+import { fetchData } from './apiCalls';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -42,13 +43,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.showMain ?
-        <> 
-        <Header />
-        {this.state.error && <h2>{this.state.error}</h2>}
-        <MoviesContainer movies={this.state.movies} displayDetails={this.displayDetails} /> </>: 
-        <MovieDetails movie={this.state.displayMovie} hideDetails={this.hideDetails}/>
-        }
+        <Route path='/' render={({match}) => {
+          <>
+            <Header />
+            <MoviesContainer movies={this.state.movies} displayDetails={this.displayDetails} />
+          </>
+        }}
+        />
+        <Route path={`/${this.state.displayMovie.title}/${this.state.displayMovie.id}`} render={({match}) => {
+          <MovieDetails movie={this.state.displayMovie} hideDetails={this.hideDetails}/>
+        }}
+        />
       </div>
     )
   }

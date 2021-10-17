@@ -1,23 +1,28 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './MovieDetails.css'
 import arrow from '../arrow.svg'
+import { NavLink, Link } from 'react-router-dom';
 
 
 
 const MovieDetails = ( {movie, hideDetails} ) => {
     return (
-      <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 60%, transparent), url(${movie.backdrop_path})`}}>
-        <button className="arrow" onClick={() => hideDetails()}>
-          <img src={arrow} alt="back arrow"/>
-        </button>
-        <section className="movie-info">
+      <NavLink to={`${movie.tile}/${movie.id}`}>
+        <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 60%, transparent), url(${movie.backdrop_path})`}}>
+          <Link to={'/'}>
+          <button className="arrow">
+            <img src={arrow} alt="back arrow"/>
+          </button>
+          </Link>
+          <section className="movie-info">
             <h2 className="detail-title">{movie.title}</h2>
             <p className="detail-rating">⭐️ Movie Rating {movie.average_rating.toFixed(2)}</p>
             <p className="detail-overview">{movie.overview}</p>
             <p>Released date: {movie.release_date}</p>
             <p>Duration: {movie.runtime} minutes</p>
-        </section>
-      </div>
+          </section>
+        </div>
+      </NavLink>
     )
 }
 
