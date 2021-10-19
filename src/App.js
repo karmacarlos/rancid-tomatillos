@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { Header } from './Header/Header';
 import  MoviesContainer  from './MoviesContainer/MoviesContainer.js';
-import MovieDetails from './MovieDetails/MovieDetails'
+import MovieDetails from './MovieDetails/MovieDetails';
 import './App.css';
-import { fetchData } from './apiCalls'
+import { fetchData } from './apiCalls';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       movies: [],
-      showMain: true,
       error: '',
       displayMovie: {},
-      trailers: [],
+      trailer: '',
     }
   }
 
@@ -28,10 +28,10 @@ class App extends Component {
     Promise.resolve(
       fetchData(`movies/${poster}`)
       .then(data => {
-      this.setState({showMain: false, displayMovie: data.movie, trailers: []})
+      this.setState({ displayMovie: data.movie })
     })).then(() => {
       fetchData(`movies/${poster}/videos`)
-      .then(data => this.setState( { trailers: data.videos } ))
+      .then(data => this.setState( { trailer: data.videos[0].key } ))
     })
   }
 
@@ -42,13 +42,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.showMain ?
-        <> 
-        <Header />
-        {this.state.error && <h2>{this.state.error}</h2>}
-        <MoviesContainer movies={this.state.movies} displayDetails={this.displayDetails} /> </>: 
-        <MovieDetails movie={this.state.displayMovie} hideDetails={this.hideDetails}/>
-        }
+        <Route exact path='/' >
+          <>
+            <Header />
+            {this.state.error && <h2>{this.state.error}</h2>}
+            <MoviesContainer movies={this.state.movies} displayDetails={this.displayDetails} />
+          </>
+        </Route>
+        <Route exact path={`/movie/${this.state.displayMovie.id}`} render={( {match} ) => {
+          if(!this.state.displayMovie) {
+            return (<h2>We are sorry, we couldn't find this movie</h2>)
+          } else {
+            return (<MovieDetails match={`/movie/${this.state.displayMovie.id}`} movie={this.state.displayMovie} />)
+          }
+        }}/>
       </div>
     )
   }
