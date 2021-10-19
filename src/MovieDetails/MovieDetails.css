@@ -6,7 +6,7 @@
   background-size: cover;
   display: flex;
   justify-content: space-between;
-
+  align-items: flex-end;
 }
 .movie-info {
   height: 90vh;
@@ -19,7 +19,9 @@
   color: white;
 }
 
-
+iframe {
+  display: flex;
+}
 .arrow{
   background: none;
   border: none;

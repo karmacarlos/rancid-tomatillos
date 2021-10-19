@@ -13,7 +13,7 @@ class App extends Component {
       movies: [],
       error: '',
       displayMovie: {},
-      trailers: [],
+      trailer: '',
     }
   }
 
@@ -28,10 +28,10 @@ class App extends Component {
     Promise.resolve(
       fetchData(`movies/${poster}`)
       .then(data => {
-      this.setState({ displayMovie: data.movie, trailers: []})
+      this.setState({ displayMovie: data.movie })
     })).then(() => {
       fetchData(`movies/${poster}/videos`)
-      .then(data => this.setState( { trailers: data.videos } ))
+      .then(data => this.setState( { trailer: data.videos[0].key } ))
     })
   }
 
@@ -49,13 +49,12 @@ class App extends Component {
             <MoviesContainer movies={this.state.movies} displayDetails={this.displayDetails} />
           </>
         </Route>
-        <Route exact path={`/movie/${this.state.displayMovie.id}`} render={({match}) => {
-          return (<MovieDetails match={`/movie/${this.state.displayMovie.id}`} movie={this.state.displayMovie} />)
-          // if(!this.state.MovieDetails) {
-          //   return (<h2>We are sorry, we couldn't find this movie</h2>)
-          // } else {
-          //   return (<MovieDetails match={`/movie/${this.state.displayMovie.id}`} movie={this.state.displayMovie} />)
-          // }
+        <Route exact path={`/movie/${this.state.displayMovie.id}`} render={( {match} ) => {
+          if(!this.state.displayMovie) {
+            return (<h2>We are sorry, we couldn't find this movie</h2>)
+          } else {
+            return (<MovieDetails match={`/movie/${this.state.displayMovie.id}`} movie={this.state.displayMovie} />)
+          }
         }}/>
       </div>
     )
