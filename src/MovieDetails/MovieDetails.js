@@ -1,13 +1,12 @@
 import React from 'react'
 import './MovieDetails.css'
 import arrow from '../arrow.svg'
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
-const MovieDetails = ( {movie, hideDetails} ) => {
+const MovieDetails = ( {movie} ) => {
     return (
-      <NavLink to={`${movie.tile}/${movie.id}`}>
         <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 60%, transparent), url(${movie.backdrop_path})`}}>
           <Link to={'/'}>
           <button className="arrow">
@@ -22,7 +21,6 @@ const MovieDetails = ( {movie, hideDetails} ) => {
             <p>Duration: {movie.runtime} minutes</p>
           </section>
         </div>
-      </NavLink>
     )
 }
 
