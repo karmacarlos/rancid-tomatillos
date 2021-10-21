@@ -29,7 +29,9 @@ iframe {
   margin-left: 60px;
   align-items: flex-start;
   margin-top: 40px;
+  margin-bottom: 90vh;
   cursor: pointer;
+  bottom:700px;
 }
 
 .arrow:hover {

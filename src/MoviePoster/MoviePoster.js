@@ -2,15 +2,15 @@ import React from 'react';
 import './MoviePoster.css'
 import { Link } from 'react-router-dom';
 
-const MoviePoster = ( {poster, title, rating, id, displayDetails} ) => {
+const MoviePoster = ( {poster, title, rating, id} ) => {
   return (
-    <Link to={`movie/${id}`}>
-      <article className='poster' id={id} onClick={(event) => displayDetails(event)}>
+
+      <article className='poster' id={id}>
         <img src={poster} alt='movie poster'/>
         <p>⭐️  {rating}</p>
         <p>{title}</p>
       </article>
-    </Link>
+
   )
 }
 
