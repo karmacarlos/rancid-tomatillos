@@ -1,8 +1,3 @@
-//potential test cases
-//home page shows error if unable to complete get request
-//on button click takes user to movie details
-//if there is an error getting movie details, it shows the error
-//sad path put on a different
 
 beforeEach(() => {
   cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'movie' })
@@ -10,12 +5,8 @@ beforeEach(() => {
   cy.visit('http://localhost:3000')
 })
 
-//test what is being rendered
-//if its a class div.class or if its a id do div#id
-//Cy.get(‘img[src=“imagesrc.com”]’) <<get attribute
 describe('Home page flows', () => {
   it('Should be able to visit http://localhost:3000', () => {
-    //testing routes... look into cypress dox
     cy.url().should('include', '/')
   });
 
@@ -29,9 +20,11 @@ describe('Home page flows', () => {
     cy.get('.movies-container')
       .get('.poster')
       .find('p')
+      .contains('Money Plane')
   })
 
   it('Should redirect user to movie details when movie poster is clicked', () => {
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919' , { fixture: 'singleMovie'})
     cy.contains('Money Plane')
       .click()
       .url()
@@ -48,32 +41,16 @@ describe('Home page flows', () => {
   it('Should render movie details', () => {
     cy.contains('Money Plane')
       .click()
-      .get('main')
-      .get('div')
-      .children('.movie-info')
       .get('h2')
       .contains('Money Plane')
   })
 
-  it.only('Should return to home page when user clicks the back arrow', () => {
+  it('Should return to home page when user clicks the back arrow', () => {
     cy.contains('Money Plane')
       .click()
-      .get('main')
-      .get('div')
-      .get('.arrow')
-      .get('img')
+      .get('a')
       .click()
       .url()
       .should('include', 'http://localhost:3000/')
   })
-
-
 });
-
-// describe('Home sad path', () => {
-//   it('Should show an error if there are no posters', () => {
-
-//     .visit('http://localhost:3000/')
-//     .get('#error').contains('Something went wrong, please try again later')
-//   })
-//})

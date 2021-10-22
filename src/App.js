@@ -5,6 +5,7 @@ import MovieDetails from './MovieDetails/MovieDetails';
 import './App.css';
 import { fetchData } from './apiCalls';
 import { Route } from 'react-router-dom';
+import ErrorComponent from './ErrorComponent/ErrorComponent';
 
 class App extends Component {
   constructor(props) {
@@ -12,8 +13,6 @@ class App extends Component {
     this.state = {
       movies: [],
       error: '',
-      displayMovie: {},
-      trailer: '',
     }
   }
 
@@ -34,8 +33,9 @@ class App extends Component {
           </>
         </Route>
         <Route exact path={`/:movie/:id`} render={( {match} ) => {
-         <MovieDetails match={match} />
+         return <MovieDetails match={match} />
         }}/>
+        <Route exact path={'/error'} render={( {match} ) => <ErrorComponent /> }/>
       </div>
     )
   }
