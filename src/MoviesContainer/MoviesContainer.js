@@ -4,11 +4,10 @@ import MoviePoster from '../MoviePoster/MoviePoster';
 import { Link } from 'react-router-dom'
 
 const MoviesContainer = ( {movies} ) => {
-console.log(movies)
   const moviesCards = movies.map(movie => {
 
     return (
-      <Link to={`${movie.title}/${movie.id}`}>
+      <Link to={`/${movie.title}/${movie.id}`}>
         <MoviePoster 
         id={movie.id}
         poster={movie.poster_path}

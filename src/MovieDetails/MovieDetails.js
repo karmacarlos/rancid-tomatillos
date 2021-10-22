@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import './MovieDetails.css'
 import arrow from '../arrow.svg'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { fetchData } from '../apiCalls'
+
 
 
 class MovieDetails extends Component {
@@ -15,27 +16,25 @@ class MovieDetails extends Component {
     }
   }
     componentDidMount() {
-      console.log(this.props)
-      Promise.resolve(
-        fetchData(`movies${parseInt(this.props.match.params.id)}`)
+      Promise.all([
+        fetchData(`movies/${parseInt(this.props.match.params.id)}`),
+        fetchData(`movies/${parseInt(this.props.match.params.id)}/videos`)
+      ])
         .then(data => {
-        this.setState({ movie: data.movie })
+        return this.setState({ 
+          movie: data[0].movie,
+          trailer: data[1].videos[0].key,
+        })
       })
       .catch(error => this.setState( { error: 'Something went wrong, please try again later' } ))
-      )
-      .then(() => {
-        fetchData(`movies/${parseInt(this.props.match.params.id)}/videos`)
-        .then(data => this.setState( { trailer: data.videos[0].key } ))
-        .catch(error => this.setState( { error: 'Something went wrong, please try again later' } ))
-      })
     }
 
   render() {
     return (
       <main>
-        {this.state.error && <h1>{this.state.error}</h1>}
+        {(this.state.error || !this.state.movie) && <Redirect to='/error' />}
      { this.state.movie &&  
-        <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 60%, transparent), url(${this.state.movie.backdrop_path})`}}>
+        <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 50%, transparent), url(${this.state.movie.backdrop_path})`}}>
           <Link to={'/'}>
             <button className="arrow">
               <img src={arrow} alt="back arrow"/>
