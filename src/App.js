@@ -60,7 +60,7 @@ class App extends Component {
         <Route exact path='/' >
           <>
             <Header />
-            {this.state.error && <h3 id='error'>{this.state.error}</h3>}
+            {this.state.error && <div className='error-div'><h2 id='error'>{this.state.error}</h2> </div>}
             <MoviesContainer movies={this.state.movies} />
           </>
         </Route>
