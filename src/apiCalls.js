@@ -7,7 +7,7 @@ const fetchData = (endPoint) => {
 
 const fetchDataExpress = (endPoint) => {
   return fetch(`http://localhost:3500/${endPoint}`)
-  .then(response => checkResponse(response))
+  .then(response => response.json());
 }
 
 const postDataExpress = (movieId) => {

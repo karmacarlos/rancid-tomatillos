@@ -19,22 +19,22 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-  Promise.all([fetchData('movies'),fetchDataExpress('watchlist')])
-  .then(data => {
-    this.setState( { 
-      movies: data[0].movies, 
-      watchListIds: data[1].watchList
-    } )
-  })
-  .then(() => {
-    const moviesToWatch = this.state.watchListIds.reduce((acc, movieId) => {
-      const movie = this.state.movies.find(movie => movie.id === movieId)
-        !acc.includes(movie)  &&  acc.push(movie)
-      return acc;
-    }, [])
-    this.setState( { watchListMovies: moviesToWatch })
-  })
-  .catch(error => this.setState( { error: 'Something went wrong, please try again later' } ))
+    Promise.resolve(fetchData('movies'))
+      .then(data => {
+        this.setState( { 
+          movies: data.movies, 
+        })
+      })
+      .catch(error => this.setState( { error: 'Something went wrong, please try again later' } ))
+    Promise.resolve(fetchDataExpress('watchlist'))
+      .then(() => {
+        const moviesToWatch = this.state.watchListIds.reduce((acc, movieId) => {
+          const movie = this.state.movies.find(movie => movie.id === movieId)
+            !acc.includes(movie)  &&  acc.push(movie)
+          return acc;
+        }, [])
+        this.setState( { watchListMovies: moviesToWatch })
+      })
   }
 
   handleWatchList = (event, movieId) => {
