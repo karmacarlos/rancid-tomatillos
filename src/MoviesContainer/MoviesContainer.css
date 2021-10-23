@@ -1,12 +1,17 @@
 .movies-container {
   background-color: black;
   height: 90vh;
-  padding: 20px;
+  padding: 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 190px;
+  grid-column-gap: 100px;
   grid-row-gap: 50px;
   grid-auto-flow: row;
   overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }

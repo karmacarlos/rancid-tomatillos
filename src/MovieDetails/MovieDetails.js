@@ -34,15 +34,15 @@ class MovieDetails extends Component {
       <main>
         {(this.state.error || !this.state.movie) && <Redirect to='/error' />}
      { this.state.movie &&  
-        <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 50%, transparent), url(${this.state.movie.backdrop_path})`}}>
+        <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 70%, transparent), url(${this.state.movie.backdrop_path})`}}>
           <Link to={'/'}>
             <button className="arrow">
               <img src={arrow} alt="back arrow"/>
             </button>
           </Link>
           <iframe
-            width="500"
-            height="350"
+            width="400"
+            height="250"
             src={`https://www.youtube.com/embed/${this.state.trailer}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -55,6 +55,7 @@ class MovieDetails extends Component {
             <p className="detail-overview">{this.state.movie.overview}</p>
             <p>Released date: {this.state.movie.release_date}</p>
             <p>Duration: {this.state.movie.runtime} minutes</p>
+            <button onClick={(event) => this.props.addToWatchList(event, this.state.movie.id)} >Add to watch List</button>
           </section>
         </div>
       }

@@ -1,7 +1,8 @@
 nav {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  border-bottom: red 3px solid;
+  border-bottom: grey 3px solid;
   color: white;
   background-color: black;
 }
@@ -11,25 +12,40 @@ nav {
   margin-bottom: 10px;
 }
 
-.nav-buttons {
-  display: flex;
+ul {
+  list-style-type: none;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
   margin-right: 25px;
   margin-bottom: 10px;
-  align-items: flex-end;
-
+  width: 500px;
 }
 
-.watch-list {
-  width: 125px;
+li {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  font-size: 35px;
+  margin-left: 5px;
+  color: white;
 }
+
 
 .icon {
   height: 30px;
-  margin-right: 25px;
-  margin-bottom: 20px;
-  margin-left: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
   fill: white;
 }
+
 .title {
   font-size: 75px;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
 }
