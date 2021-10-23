@@ -19,3 +19,17 @@ describe('Movie details sad path', () => {
       .should('include', 'http://localhost:3000/error')
   });
 });
+
+describe('Watchlist sad path', () => {
+  it('Should display a message indicating that the watchlist is empty if it does not contain movies', () => {
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'movie'})
+    .as('movies')
+    .visit('http://localhost:3000')
+    .get('.watch-list')
+    .click()
+    .url()
+    .should('include', 'http://localhost:3000/watchlist')
+    cy.get('#error')
+    .should('contain', 'There is no movie on the watch list, try adding some')
+  })
+})
