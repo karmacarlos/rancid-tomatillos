@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './MovieDetails.css'
-import arrow from '../arrow.svg'
+import arrow from '../../arrow.svg'
 import { Link, Redirect } from 'react-router-dom';
-import { fetchData } from '../apiCalls'
+import { fetchData } from '../../apiCalls'
 
 
 

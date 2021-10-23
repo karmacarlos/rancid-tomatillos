@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Header } from './Header/Header';
-import  MoviesContainer  from './MoviesContainer/MoviesContainer.js';
-import MovieDetails from './MovieDetails/MovieDetails';
+import { Header } from '../Header/Header';
+import  MoviesContainer  from '../MoviesContainer/MoviesContainer.js';
+import MovieDetails from '../MovieDetails/MovieDetails';
 import './App.css';
-import { fetchData, postDataExpress, fetchDataExpress } from './apiCalls';
+import { fetchData, postDataExpress, fetchDataExpress } from '../../apiCalls';
 import { Route } from 'react-router-dom';
-import ErrorComponent from './ErrorComponent/ErrorComponent';
+import ErrorComponent from '../ErrorComponent/ErrorComponent';
 
 class App extends Component {
   constructor(props) {

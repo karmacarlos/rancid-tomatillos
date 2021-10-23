@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import Binoculars from '../binoculars.svg';
+import Binoculars from '../../binoculars.svg';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
