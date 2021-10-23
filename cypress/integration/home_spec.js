@@ -2,6 +2,8 @@
 beforeEach(() => {
   cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'movie' })
     .as('movies')
+  cy.intercept('GET', 'http://localhost:3500/watchlist', { "watchList": [694919, 337401] })
+    .as('watchlist')
   cy.visit('http://localhost:3000')
 })
 
@@ -52,5 +54,13 @@ describe('Home page flows', () => {
       .click()
       .url()
       .should('include', 'http://localhost:3000/')
+  })
+
+  it('Should display all the movies stored on the watchlist', () => {
+    // cy.intercept('GET', 'http://localhost:3500/watchlist', { "watchList": [694919, 337401] })
+    cy.visit('http://localhost:3000/watchlist')
+    cy.get('.movies-container')
+      .children()
+      .should('have.length', 2)
   })
 });

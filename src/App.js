@@ -26,7 +26,9 @@ class App extends Component {
         })
       })
       .catch(error => this.setState( { error: 'Something went wrong, please try again later' } ))
-    Promise.resolve(fetchDataExpress('watchlist'))
+    .then(() => {
+      Promise.resolve(fetchDataExpress('watchlist'))
+    .then(data => this.setState( { watchListIds: data.watchList} ))
       .then(() => {
         const moviesToWatch = this.state.watchListIds.reduce((acc, movieId) => {
           const movie = this.state.movies.find(movie => movie.id === movieId)
@@ -35,6 +37,7 @@ class App extends Component {
         }, [])
         this.setState( { watchListMovies: moviesToWatch })
       })
+    })
   }
 
   handleWatchList = (event, movieId) => {
@@ -67,7 +70,7 @@ class App extends Component {
         <Route exact path='/watchlist' >
           <>
             <Header />
-            {(this.state.error || !this.state.watchListMovies.length) ? 
+            {!this.state.watchListMovies.length ? 
             <div className='error-div'><h2 className='error-h2' id='error'>There is no movie on the watch list, try adding some </h2></div> :
             <MoviesContainer movies={this.state.watchListMovies} /> }
           </>
