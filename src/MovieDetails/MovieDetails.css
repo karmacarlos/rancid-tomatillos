@@ -18,12 +18,14 @@
   justify-content: flex-end;
   align-items: flex-end;
   color: white;
+  background-color: transparent;
 }
 
 iframe {
   display: flex;
   margin-bottom: 90px;
 }
+
 .arrow{
   background: none;
   border: none;
@@ -33,7 +35,7 @@ iframe {
   margin-top: 40px;
   margin-bottom: 90vh;
   cursor: pointer;
-  bottom:700px;
+  bottom: 40vh;
   fill: white;
 }
 

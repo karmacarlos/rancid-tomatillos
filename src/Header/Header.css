@@ -5,6 +5,11 @@ nav {
   border-bottom: grey 3px solid;
   color: white;
   background-color: black;
+  width: 100vw;
+}
+
+header {
+  width: 100vw;
 }
 
 .title {

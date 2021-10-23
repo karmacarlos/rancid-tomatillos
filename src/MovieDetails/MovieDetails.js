@@ -34,7 +34,7 @@ class MovieDetails extends Component {
       <main>
         {(this.state.error || !this.state.movie) && <Redirect to='/error' />}
      { this.state.movie &&  
-        <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 70%, transparent), url(${this.state.movie.backdrop_path})`}}>
+        <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 50%, transparent), url(${this.state.movie.backdrop_path})`}}>
           <Link to={'/'}>
             <button className="arrow">
               <img src={arrow} alt="back arrow"/>
