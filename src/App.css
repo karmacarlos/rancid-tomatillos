@@ -37,7 +37,7 @@
   }
 }
 
-h2 {
+.error-h2 {
   color:white;
   margin: 0;
   padding-top: 30px;
@@ -45,4 +45,5 @@ h2 {
 
 .error-div {
   background-color: black;
+  height: 90vh;
 }

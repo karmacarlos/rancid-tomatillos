@@ -60,15 +60,16 @@ class App extends Component {
         <Route exact path='/' >
           <>
             <Header />
-            {this.state.error && <div className='error-div'><h2 id='error'>{this.state.error}</h2> </div>}
-            <MoviesContainer movies={this.state.movies} />
+            {this.state.error ? <div className='error-div'><h2 className='error-h2' id='error'>{this.state.error}</h2> </div> :
+            <MoviesContainer movies={this.state.movies} />}
           </>
         </Route>
         <Route exact path='/watchlist' >
           <>
             <Header />
-            {(this.state.error || !this.state.watchListMovies) && <h3 id='error'>There is no movie on the watch list, try adding some </h3>}
-            <MoviesContainer movies={this.state.watchListMovies} />
+            {(this.state.error || !this.state.watchListMovies.length) ? 
+            <div className='error-div'><h2 className='error-h2' id='error'>There is no movie on the watch list, try adding some </h2></div> :
+            <MoviesContainer movies={this.state.watchListMovies} /> }
           </>
         </Route>
         <Route exact path={`/:movie/:id`} render={( {match} ) => {

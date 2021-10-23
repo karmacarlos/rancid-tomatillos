@@ -27,20 +27,21 @@ iframe {
 }
 
 .arrow{
-  background: none;
+  background-color:whitesmoke;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   border: none;
   display: flex;
+  justify-content: center;
   margin-left: 60px;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 40px;
   margin-bottom: 90vh;
   cursor: pointer;
   bottom: 40vh;
   fill: white;
-}
-
-.arrow::hover {
-  color:chartreuse;
 }
 
 .detail-title,
@@ -52,4 +53,19 @@ iframe {
 .detail-overview {
   margin-bottom: 40px;
   text-align:right;
+}
+
+.watchlist-button {
+  font-size: 20px;
+  border: none;
+  background-color:whitesmoke;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.arrow:hover,
+.watchlist-button:hover {
+  background-color:chartreuse;
 }
