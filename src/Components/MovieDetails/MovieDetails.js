@@ -3,6 +3,7 @@ import './MovieDetails.css'
 import arrow from '../../arrow.svg'
 import { Link, Redirect } from 'react-router-dom';
 import { fetchData } from '../../apiCalls'
+import PropTypes from 'prop-types';
 
 
 
@@ -65,4 +66,9 @@ class MovieDetails extends Component {
 }
 
 
-export default MovieDetails
+export default MovieDetails;
+
+MovieDetails.propTypes = {
+  match: PropTypes.string.isRequired,
+  addToWatchList: PropTypes.func.isRequired
+};
