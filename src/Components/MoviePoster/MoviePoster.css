@@ -1,20 +1,17 @@
 .poster {
-  height: 450px;
-  width: 250px;
+  
+  width: 200px;
   display: flex;
   flex-direction: column;
+  align-content: center;
   color:white;
   cursor: pointer;
-  padding: 25px;
   transition-duration: 0.5s;
+  margin-right: 0;
+  --contentWidth: 80vw;
 }
 
 .poster:hover {
   transform: scale(1.1);
 }
 
-.info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}

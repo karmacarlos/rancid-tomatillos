@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './MovieDetails.css'
-import arrow from '../arrow.svg'
+import arrow from '../../arrow.svg'
 import { Link, Redirect } from 'react-router-dom';
-import { fetchData } from '../apiCalls'
+import { fetchData } from '../../apiCalls'
 
 
 
@@ -41,8 +41,8 @@ class MovieDetails extends Component {
             </button>
           </Link>
           <iframe
-            width="500"
-            height="350"
+            width="400"
+            height="250"
             src={`https://www.youtube.com/embed/${this.state.trailer}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -55,6 +55,7 @@ class MovieDetails extends Component {
             <p className="detail-overview">{this.state.movie.overview}</p>
             <p>Released date: {this.state.movie.release_date}</p>
             <p>Duration: {this.state.movie.runtime} minutes</p>
+            <button className='watchlist-button' onClick={(event) => this.props.addToWatchList(event, this.state.movie.id)} >Add to watch List</button>
           </section>
         </div>
       }

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Catamaran', sans-serif;
 }
 
 .App-logo {
@@ -35,4 +36,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.error-h2 {
+  color:white;
+  margin: 0;
+  padding-top: 30px;
+}
+
+.error-div {
+  background-color: black;
+  height: 90vh;
 }

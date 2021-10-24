@@ -1,0 +1,57 @@
+nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: grey 3px solid;
+  color: white;
+  background-color: black;
+  width: 100vw;
+}
+
+header {
+  width: 100vw;
+  font-family: 'Bitter', serif;
+}
+
+.title {
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+li {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  font-size: 35px;
+  margin-left: 5px;
+  color: white;
+}
+
+
+.icon {
+  height: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
+  fill: white;
+}
+
+.title {
+  font-size: 75px;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
