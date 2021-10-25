@@ -29,7 +29,8 @@ The Rancid Tomatillos web application allows users to view available movies. To 
 ## Illustrations
 
 Home Page
-<img src="https://user-images.githubusercontent.com/21073095/138612092-595adc31-29fa-4ae3-831e-c8029584ec18.png" alt="home page of rancid tomatillos" style="width:400px;"/>
+![Screen Shot 2021-10-25 at 4 42 23 PM](https://user-images.githubusercontent.com/81398850/138782932-61503ea7-8276-4a74-a48a-982a8dc47426.png)
+
 
 Movie Details
 <img src="https://user-images.githubusercontent.com/21073095/138612093-ad775d8a-869f-4c2b-b470-065b6dff92c1.png" alt="movie details page of rancid tomatillos" style="width:400px;"/>
@@ -38,15 +39,17 @@ Empty Watch List
 <img src="https://user-images.githubusercontent.com/21073095/138612181-11e7da8e-d848-4f6a-a3c4-5d299a2a3be5.png" alt="empty watch list page of rancid tomatillos" style="width:400px;"/>
 
 Watch List
-<img src="https://user-images.githubusercontent.com/21073095/138612097-555d22f9-ef8e-48e1-8da3-f496d9d2821e.png" alt="watch list page of rancid tomatillos" style="width:400px;"/>
+![Screen Shot 2021-10-25 at 4 42 35 PM](https://user-images.githubusercontent.com/81398850/138782969-bfbc28c1-63ef-48f1-8faa-86dca76b05c8.png)
+
 
 Responsive Design: Tablet View 
+![Screen Shot 2021-10-25 at 4 43 20 PM](https://user-images.githubusercontent.com/81398850/138782988-b7825e2c-6b51-4f00-a6d5-49951b50148e.png)
 
-<img src="https://user-images.githubusercontent.com/21073095/138777879-b9587cfe-5a65-48ce-9266-b5a03c69c282.png" alt="tablet view" style="width:400px;"/>
 
 Responsive Design: Mobile View
+![Screen Shot 2021-10-25 at 4 44 01 PM](https://user-images.githubusercontent.com/81398850/138783006-54c92533-04e5-477d-9f16-2d80c8144177.png)
+![Screen Shot 2021-10-25 at 4 44 19 PM](https://user-images.githubusercontent.com/81398850/138783012-56936455-8d6b-45aa-af67-805aaedba8d0.png)
 
-<img src="https://user-images.githubusercontent.com/21073095/138777845-2c747da0-7f23-4421-904c-faf28cbd37a3.png" alt="mobile view" style="width:150px;"/>
 
 Lighthouse Score
 
@@ -62,9 +65,6 @@ Lighthouse Score
 7) In a seperate terminal run `npm install`
 8) Run `npm start`
 
-## Contributors
-  - [Carlos Gomez](https://github.com/karmacarlos)
-  - [Janika Hortizuela](https://github.com/jhortizu01)
 
 ## Wins
   - Great team collaboration
@@ -82,6 +82,10 @@ Lighthouse Score
   - Deploy the web application
   - Add log in capabilities so multiple users can use the web application
   - Responsive web design
+
+## Contributors
+  - [Carlos Gomez](https://github.com/karmacarlos)
+  - [Janika Hortizuela](https://github.com/jhortizu01)
 
 ## Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
