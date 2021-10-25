@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const MoviePoster = ( {poster, title, rating, id} ) => {
   return (
       <article className='poster' id={id}>
-        <img src={poster} alt='movie poster'/>
-        <p>⭐️  {rating}</p>
-        <p>{title}</p>
+        <img src={poster} alt={`${title} poster`}/>
+        <p aria-label="movie rating">⭐️  {rating}</p>
+        <p aria-label="movie title">{title}</p>
       </article>
   )
 }
