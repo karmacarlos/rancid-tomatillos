@@ -12,7 +12,7 @@ Mod 3 Project
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
   - [Wins](#wins)
-  - [Challenges + Improvements](#challenges-+-Improvements)
+  - [Challenges](#challenges)
   - [Project Specs](#project-specs)
 
 ## Abstract
@@ -50,6 +50,17 @@ The Rancid Tomatillos web application allows users to view available movies. To 
   - [Carlos Gomez](https://github.com/karmacarlos)
   - [Janika Hortizuela](https://github.com/jhortizu01)
 
+## Wins
+  - Great team collaboration
+  - Demonstrated proficiency in React
+  - Applied Router for a multipage user experience
+  - Implemented proptypes to bullet proof our application and functioning of the app
+  - Created Express server to add watchlist functionality
+
+## Challenges & Improvements
+  - Had trouble intercepting API requests during Cypress testing
+  - Had challenges implementing router at the begining of the project
+  - Had challenges debugging router 
 
 ## Future Features
   - Deploy the web application
