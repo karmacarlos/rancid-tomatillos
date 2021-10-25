@@ -38,12 +38,13 @@ The Rancid Tomatillos web application allows users to view available movies. To 
 
 ## Install + Setup
 1) Clone down the Rancid Tomatillos repo
-2) Run `npm install`
-3) Run `npm start`
-4) Clone down the [Rancid Tomatillos API](https://github.com/jhortizu01/rancid-tomatillos-api)
-5) In a seperate terminal run `npm install`
-6) Run `npm start`
-
+2) Cd into `rancid-tomatillos`
+3) Run `npm install`
+4) Run `npm start`
+5) Your browser will open the website.
+6) Clone down the [Rancid Tomatillos API](https://github.com/jhortizu01/rancid-tomatillos-api)
+7) In a seperate terminal run `npm install`
+8) Run `npm start`
 
 ## Contributors
   - [Carlos Gomez](https://github.com/karmacarlos)
