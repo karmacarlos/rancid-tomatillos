@@ -12,8 +12,8 @@ Mod 3 Project
   - [Illustrations](#illustrations)
   - [Wins](#wins)
   - [Challenges](#challenges)
-  - [Project Specs](#project-specs)
   - [Contributors](#contributors)
+  - [Project Specs](#project-specs)
 
 ## Abstract
 The Rancid Tomatillos web application allows users to view available movies. To get additional information on the movie the user clicks the movie poster and will be brought to a different page which has a movie trailer and additional movie content. The user can click "add to watch list" on the movie detail page and their movie will be added to their watch list. When the user is on the home page and clicks the watch list icon, they can review all the movies they have on their watch list.
