@@ -28,13 +28,29 @@ The Rancid Tomatillos web application allows users to view available movies. To 
 
 ## Illustrations
 
-<img src="https://user-images.githubusercontent.com/21073095/138612092-595adc31-29fa-4ae3-831e-c8029584ec18.png" alt="main page of rancid tomatillos" style="width:400px;"/>
+Home Page
+<img src="https://user-images.githubusercontent.com/21073095/138612092-595adc31-29fa-4ae3-831e-c8029584ec18.png" alt="home page of rancid tomatillos" style="width:400px;"/>
 
-<img src="https://user-images.githubusercontent.com/21073095/138612093-ad775d8a-869f-4c2b-b470-065b6dff92c1.png" alt="main page of rancid tomatillos" style="width:400px;"/>
+Movie Details
+<img src="https://user-images.githubusercontent.com/21073095/138612093-ad775d8a-869f-4c2b-b470-065b6dff92c1.png" alt="movie details page of rancid tomatillos" style="width:400px;"/>
 
-<img src="https://user-images.githubusercontent.com/21073095/138612181-11e7da8e-d848-4f6a-a3c4-5d299a2a3be5.png" alt="main page of rancid tomatillos" style="width:400px;"/>
+Empty Watch List
+<img src="https://user-images.githubusercontent.com/21073095/138612181-11e7da8e-d848-4f6a-a3c4-5d299a2a3be5.png" alt="empty watch list page of rancid tomatillos" style="width:400px;"/>
 
-<img src="https://user-images.githubusercontent.com/21073095/138612097-555d22f9-ef8e-48e1-8da3-f496d9d2821e.png" alt="main page of rancid tomatillos" style="width:400px;"/>
+Watch List
+<img src="https://user-images.githubusercontent.com/21073095/138612097-555d22f9-ef8e-48e1-8da3-f496d9d2821e.png" alt="watch list page of rancid tomatillos" style="width:400px;"/>
+
+Responsive Design: Tablet View 
+
+<img src="https://user-images.githubusercontent.com/21073095/138777879-b9587cfe-5a65-48ce-9266-b5a03c69c282.png" alt="tablet view" style="width:400px;"/>
+
+Responsive Design: Mobile View
+
+<img src="https://user-images.githubusercontent.com/21073095/138777845-2c747da0-7f23-4421-904c-faf28cbd37a3.png" alt="mobile view" style="width:150px;"/>
+
+Lighthouse Score
+
+<img src="https://user-images.githubusercontent.com/21073095/138777905-445699e0-37fa-48cb-b3db-98937fb1703f.png" alt="lighthouse score" style="width:400px;"/>
 
 ## Install + Setup
 1) Clone down the Rancid Tomatillos repo
