@@ -59,7 +59,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <main className="App">
         <Route exact path='/' >
           <>
             <Header />
@@ -79,7 +79,7 @@ class App extends Component {
          return <MovieDetails match={match} addToWatchList={this.handleWatchList} />
         }}/>
         <Route exact path={'/error'} render={( {match} ) => <ErrorComponent /> }/>
-      </div>
+      </main>
     )
   }
 }

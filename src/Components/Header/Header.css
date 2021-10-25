@@ -14,8 +14,10 @@ header {
 }
 
 .title {
-  margin-left: 60px;
+  margin-left: 120px;
   margin-bottom: 10px;
+  font-size: 75px;
+  color: white;
 }
 
 ul {
@@ -23,7 +25,7 @@ ul {
   display:flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-right: 25px;
+  margin-right: 100px;
   margin-bottom: 10px;
   width: 500px;
 }
@@ -47,11 +49,39 @@ li {
   fill: white;
 }
 
-.title {
-  font-size: 75px;
-  color: white;
-}
-
 a:link {
   text-decoration: none;
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: space-between; */
+    width: 100vw;
+  }
+
+  ul {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+
+  li {
+    width: 120px;
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  .icon {
+    height: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
 }

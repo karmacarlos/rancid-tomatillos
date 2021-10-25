@@ -10,16 +10,11 @@ const Header = () => {
           <Link to='/' >
             <h1 className='title'>Rancid Tomatillos</h1>
           </Link>
-           
-              <Link to='/watchlist' aria-label="link to watch list">
-                <ul>
-                <li aria-label="watch list" className='watch-list'>Watch List <img className='icon' src={Binoculars} alt="binoculars"/></li>
-                </ul>
-              </Link>
-              <ul>
-                <li aria-label="user" className='user'>User test</li>
-                </ul>
-         
+          <Link to='/watchlist' >
+            <ul>
+              <li className='watch-list'>Watch List <img className='icon' src={Binoculars} alt="binoculars"/></li>
+            </ul>
+          </Link>   
         </nav>
       </header>
     )
