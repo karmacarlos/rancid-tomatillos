@@ -32,10 +32,10 @@ class MovieDetails extends Component {
 
   render() {
     return (
-      <main>
+      <>
         {(this.state.error || !this.state.movie) && <Redirect to='/error' />}
      { this.state.movie &&  
-        <div className="details" style={{ backgroundImage: `linear-gradient(to top, black, 50%, transparent), url(${this.state.movie.backdrop_path})`}}>
+        <section className="details" style={{ backgroundImage: `linear-gradient(to top, black, 50%, transparent), url(${this.state.movie.backdrop_path})`}}>
           <Link to={'/'}>
             <button className="arrow">
               <img src={arrow} alt="back arrow"/>
@@ -58,9 +58,9 @@ class MovieDetails extends Component {
             <p>Duration: {this.state.movie.runtime} minutes</p>
             <button className='watchlist-button' onClick={(event) => this.props.addToWatchList(event, this.state.movie.id)} >Add to watch List</button>
           </section>
-        </div>
+        </section>
       }
-      </main>
+      </>
     )
   }
 }

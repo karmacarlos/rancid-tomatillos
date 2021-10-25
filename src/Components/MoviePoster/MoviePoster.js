@@ -6,8 +6,8 @@ const MoviePoster = ( {poster, title, rating, id} ) => {
   return (
       <article className='poster' id={id}>
         <img src={poster} alt={`${title} poster`}/>
-        <p aria-label="movie rating">⭐️  {rating}</p>
-        <p aria-label="movie title">{title}</p>
+        <p>⭐️  {rating}</p>
+        <p>{title}</p>
       </article>
   )
 }
