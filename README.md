@@ -26,7 +26,7 @@ The Rancid Tomatillos web application allows users to view available movies. To 
   - Cypress
   - Express.js
 
-## Install + Setup
+## Set-up
 1) Clone down the Rancid Tomatillos repo
 2) Cd into `rancid-tomatillos`
 3) Run `npm install`
