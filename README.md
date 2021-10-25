@@ -29,23 +29,26 @@ The Rancid Tomatillos web application allows users to view available movies. To 
 ## Illustrations
 
 Home Page
+
 <img src="https://user-images.githubusercontent.com/81398850/138782932-61503ea7-8276-4a74-a48a-982a8dc47426.png" alt="movie details page of rancid tomatillos" style="width:400px;"/>
 
 Movie Details
+
 <img src="https://user-images.githubusercontent.com/21073095/138612093-ad775d8a-869f-4c2b-b470-065b6dff92c1.png" alt="movie details page of rancid tomatillos" style="width:400px;"/>
 
-Empty Watch List
-<img src="https://user-images.githubusercontent.com/21073095/138612181-11e7da8e-d848-4f6a-a3c4-5d299a2a3be5.png" alt="empty watch list page of rancid tomatillos" style="width:400px;"/>
-
 Watch List
+
 <img src="https://user-images.githubusercontent.com/81398850/138782969-bfbc28c1-63ef-48f1-8faa-86dca76b05c8.png" alt="empty watch list page of rancid tomatillos" style="width:400px;"/>
 
 Responsive Design: Tablet View 
+
 <img src="https://user-images.githubusercontent.com/81398850/138782988-b7825e2c-6b51-4f00-a6d5-49951b50148e.png" alt="empty watch list page of rancid tomatillos" style="width:400px;"/>
 
 Responsive Design: Mobile View
+
 <img src="https://user-images.githubusercontent.com/81398850/138783006-54c92533-04e5-477d-9f16-2d80c8144177.png" alt="empty watch list page of rancid tomatillos" style="width:400px;"/>
 <img src="https://user-images.githubusercontent.com/81398850/138783012-56936455-8d6b-45aa-af67-805aaedba8d0.png" alt="empty watch list page of rancid tomatillos" style="width:400px;"/>
+
 Lighthouse Score
 
 <img src="https://user-images.githubusercontent.com/21073095/138777905-445699e0-37fa-48cb-b3db-98937fb1703f.png" alt="lighthouse score" style="width:400px;"/>
