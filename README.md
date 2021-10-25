@@ -36,6 +36,10 @@ The Rancid Tomatillos web application allows users to view available movies. To 
 7) In a seperate terminal run `npm install`
 8) Run `npm start`
 
+## Code Arquitecture
+
+  The React arquitecture is based on two class components and three functional components. The class components holds state and are in charge of the network requests, while the functional components just render information passed down as props.
+
 ## Illustrations
 
 Home Page
