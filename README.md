@@ -8,7 +8,7 @@ Mod 3 Project
   - [Abstract](#abstract)
   - [Technologies](#technologies)
   - [Code Architecture](#code-architecture)
-  - [Install + Setup](#set-up)
+  - [Install and Set Up](#set-up)
   - [Illustrations](#illustrations)
   - [Wins](#wins)
   - [Challenges](#challenges)
