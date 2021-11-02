@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    Promise.resolve(fetchData('movies'))
+    fetchData('movies')
       .then(data => {
         this.setState( { 
           movies: data.movies, 
@@ -27,7 +27,7 @@ class App extends Component {
       })
       .catch(error => this.setState( { error: 'Something went wrong, please try again later' } ))
     .then(() => {
-      Promise.resolve(fetchDataExpress('watchlist'))
+      fetchDataExpress('watchlist')
     .then(data => this.setState( { watchListIds: data.watchList} ))
       .then(() => {
         const moviesToWatch = this.state.watchListIds.reduce((acc, movieId) => {
@@ -75,7 +75,7 @@ class App extends Component {
             <MoviesContainer movies={this.state.watchListMovies} /> }
           </>
         </Route>
-        <Route exact path={`/:movie/:id`} render={( {match} ) => {
+        <Route exact path={`/movie/:id`} render={( {match} ) => {
          return <MovieDetails match={match} addToWatchList={this.handleWatchList} />
         }}/>
         <Route exact path={'/error'} render={( {match} ) => <ErrorComponent /> }/>

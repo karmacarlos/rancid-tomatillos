@@ -2,9 +2,10 @@
   background-color: black;
   height: max-content;
   max-width: 100vw;
-  padding: 70px;
+  padding: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap:10px;
 }
 
