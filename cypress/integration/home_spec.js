@@ -10,20 +10,14 @@ beforeEach(() => {
 describe('Home page flows', () => {
   it('Should be able to visit http://localhost:3000', () => {
     cy.url().should('include', '/')
-  });
-
-  it('Should be able to show all movie posters', () => {
-    cy.get('.movies-container')
+      .get('.movies-container')
       .children()
       .should('have.length', 2)
-  });
-
-  it('Movie should have title and rating', () => {
-    cy.get('.movies-container')
+      .get('.movies-container')
       .get('.poster')
       .find('p')
       .contains('Money Plane')
-  })
+  });
 
   it('Should redirect user to movie details when movie poster is clicked', () => {
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919' , { fixture: 'singleMovie'})

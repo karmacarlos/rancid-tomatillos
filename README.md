@@ -40,7 +40,7 @@ To run the application:
 8) Run `npm start`
 
 To run Cypress tests:
-1) In a seperate terminal, run `npm run cypress`
+1) In a seperate terminal, run `npx cypress open`
 2) Cypress browser will load, choose a test and see the results
 
 ## Code Architecture

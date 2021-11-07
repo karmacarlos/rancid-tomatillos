@@ -24,6 +24,8 @@ describe('Watchlist sad path', () => {
   it('Should display a message indicating that the watchlist is empty if it does not contain movies', () => {
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'movie'})
     .as('movies')
+    cy.intercept('http://localhost:3500/watchlist', {})
+    .as('watchlist')
     .visit('http://localhost:3000')
     .get('.watch-list')
     .click()
