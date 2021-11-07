@@ -30,5 +30,5 @@ const MoviesContainer = ( {movies} ) => {
 export default MoviesContainer;
 
 MoviesContainer.propTypes = {
-  movies: PropTypes.object.isRequired
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired
 };
