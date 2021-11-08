@@ -6,12 +6,12 @@ const fetchData = (endPoint) => {
 }
 
 const fetchDataExpress = (endPoint) => {
-  return fetch(`http://localhost:3500/${endPoint}`)
+  return fetch(`https://express-rancid-tomatillos.herokuapp.com/${endPoint}`)
   .then(response => response.json());
 }
 
 const postDataExpress = (movieId) => {
-  return fetch('http://localhost:3500/watchlist', {
+  return fetch('https://express-rancid-tomatillos.herokuapp.com/watchlist', {
     method: 'POST',
     body: JSON.stringify({
       movieId,
