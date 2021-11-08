@@ -28,6 +28,8 @@ The Rancid Tomatillos web application allows users to view available movies. To 
 
 ## Install and Set Up
 
+You can play with our deployed app [here](https://rancid-tomatillos-2107.herokuapp.com)
+
 To run the application:
 
 1) Clone down the Rancid Tomatillos repo
