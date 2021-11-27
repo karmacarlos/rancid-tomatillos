@@ -2,7 +2,7 @@
 beforeEach(() => {
   cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'movie' })
     .as('movies')
-  cy.intercept('GET', 'http://localhost:3500/watchlist', { "watchList": [694919, 337401] })
+  cy.intercept('GET', 'https://express-rancid-tomatillos.herokuapp.com/watchlist', { "watchList": [694919, 337401] })
     .as('watchlist')
   cy.visit('http://localhost:3000')
 })
