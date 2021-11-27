@@ -24,7 +24,7 @@ describe('Home page flows', () => {
     cy.contains('Money Plane')
       .click()
       .url()
-      .should('include', 'http://localhost:3000/Money%20Plane/694919') 
+      .should('include', 'http://localhost:3000/movie/694919') 
   })
 
   it('Should render movie trailer', () => {
@@ -51,7 +51,7 @@ describe('Home page flows', () => {
   })
 
   it('Should display all the movies stored on the watchlist', () => {
-    // cy.intercept('GET', 'http://localhost:3500/watchlist', { "watchList": [694919, 337401] })
+    cy.intercept('GET', 'https://express-rancid-tomatillos.herokuapp.com/watchlist', { "watchList": [694919, 337401] })
     cy.visit('http://localhost:3000/watchlist')
     cy.get('.movies-container')
       .children()
